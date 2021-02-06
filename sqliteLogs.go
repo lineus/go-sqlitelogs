@@ -1,6 +1,7 @@
 package sqlitelogs
 
 import (
+	"database/sql"
 	"time"
 )
 
@@ -14,7 +15,7 @@ type SqliteLog struct {
 
 // SqliteLogger - abstraction for access to sqlite logs
 type SqliteLogger interface {
-	SaveLog(string, string) error
+	SaveLog(string, string) sql.Result, error
 	GetAllLogs() []SqliteLog
 	GetLogsBetween(time.Time, time.Time) []SqliteLog
 	Alive() bool
