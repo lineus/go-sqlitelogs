@@ -7,10 +7,10 @@ import (
 
 // SqliteLog - shape of a log in sqlite
 type SqliteLog struct {
-	id     int
-	epoch  float64
-	action string
-	result string
+	ID     int
+	Epoch  float64
+	Action string
+	Result string
 }
 
 // SqliteLogger - abstraction for access to sqlite logs
