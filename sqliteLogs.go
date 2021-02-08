@@ -16,7 +16,7 @@ type SqliteLog struct {
 // SqliteLogger - abstraction for access to sqlite logs
 type SqliteLogger interface {
 	SaveLog(string, string) (sql.Result, error)
-	GetAllLogs() []SqliteLog
-	GetLogsBetween(time.Time, time.Time) []SqliteLog
+	GetAllLogs() ([]SqliteLog, error)
+	GetLogsBetween(time.Time, time.Time) ([]SqliteLog, error)
 	Alive() bool
 }
