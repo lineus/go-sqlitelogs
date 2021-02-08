@@ -8,7 +8,7 @@ import (
 // SqliteLog - shape of a log in sqlite
 type SqliteLog struct {
 	ID     int
-	Epoch  float64
+	Epoch  int64
 	Action string
 	Result string
 }
